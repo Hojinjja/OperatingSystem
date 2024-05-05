@@ -39,7 +39,6 @@ parent_proc()
 int
 main()
 {
-	pid_t child_pid ;
 	int exit_code ;
 
 	if (pipe(pipes) != 0) { // 파이프화 
@@ -47,6 +46,7 @@ main()
 		exit(1) ;
 	}
 
+	pid_t child_pid ;
 	if (child_pid = fork()) { // fork로 자식 프로세스,부모 프로세스 분기
 		parent_proc() ;
 	}
